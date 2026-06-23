@@ -62,17 +62,6 @@
 
             tap-ms = <100>;
         };
-
-        lh_bt: long_hold_bt {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <500>;
-            bindings = <&bt>, <&none>;
-
-            display-name = "Layer-Tap";
-            require-prior-idle-ms = <150>;
-        };
     };
 
     combos {
@@ -145,10 +134,10 @@
 
         keyboard {
             bindings = <
-&lh_bt BT_CLR_ALL 0  &trans        &trans        &trans        &trans        &trans                          &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&lh_bt BT_CLR 0      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans               &trans        &trans        &trans        &trans        &trans        &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                                                 &trans        &trans        &trans                                          &trans  &trans  &trans
+&none   &trans        &trans        &trans        &trans        &trans                          &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&none   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans        &trans        &trans        &trans        &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                    &trans        &trans        &trans                                          &trans  &trans  &trans
             >;
 
             label = "KEYBOARD";
