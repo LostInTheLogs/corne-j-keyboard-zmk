@@ -3,7 +3,7 @@ layers:
   QWERTY:
   - $$mdi:keyboard-esc$$
   - Q
-  - W
+  - {t: W, h: '$$mdi:apple-keyboard-option$$'}
   - E
   - R
   - T
@@ -11,7 +11,7 @@ layers:
   - Y
   - U
   - I
-  - O
+  - {t: O, h: '$$mdi:apple-keyboard-option$$'}
   - P
   - {t: \, s: '|'}
   - $$mdi:keyboard-tab$$
@@ -31,17 +31,17 @@ layers:
   - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-shift$$
   - {t: Z, h: '$$mdi:apple-keyboard-control$$'}
-  - X
-  - C
+  - {t: X, h: LMETA}
+  - {t: C, h: '$$mdi:apple-keyboard-option$$'}
   - V
   - B
   - $$mdi:keyboard-space$$
   - $$mdi:arrow-down-bold$$
   - N
   - M
-  - {t: ',', s: <}
-  - {t: ., s: '>'}
-  - {t: /, s: '?'}
+  - {t: '$$mdi:apple-keyboard-option$$', h: ','}
+  - {t: ., h: RMETA, s: '>'}
+  - {t: /, h: '$$mdi:apple-keyboard-control$$', s: '?'}
   - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:keyboard-space$$
