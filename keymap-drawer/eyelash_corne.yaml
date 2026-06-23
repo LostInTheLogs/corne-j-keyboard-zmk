@@ -48,7 +48,7 @@ layers:
   - {t: '$$mdi:backspace$$', h: SYMBOLS}
   - {t: '$$mdi:backspace-reverse-outline$$', h: SYSTEM}
   - {t: '$$mdi:keyboard-return$$', h: NUMBERS}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - KEYBOARD
   GAMING:
   - {t: '$$mdi:transfer$$', type: trans}
   - T
@@ -293,7 +293,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   old1:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '1', s: '!'}
