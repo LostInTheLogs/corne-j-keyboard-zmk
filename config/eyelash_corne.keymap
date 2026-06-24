@@ -113,10 +113,10 @@
 
         sthumb {
             bindings = <
-&trans  &trans  &trans  &trans  &trans         &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &h_mt LCTRL F  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans         &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans         &trans                                    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans         &trans                    &trans          &trans      &trans         &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans         &trans            &trans  &trans  &trans  &trans      &trans         &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans         &trans  &trans            &trans          &trans      &trans         &trans  &trans  &trans  &trans
+                        &tog 3  &lt 4 BSPC     &kp SPACE                                 &lt 5 ENTER &lt 6 DELETE   &mo 7
             >;
 
             label = "sthumb";
