@@ -39,7 +39,7 @@ layers:
   - $$mdi:arrow-down-bold$$
   - N
   - M
-  - {t: '$$mdi:apple-keyboard-option$$', h: ','}
+  - {t: ',', h: '$$mdi:apple-keyboard-option$$', s: <}
   - {t: ., h: RMETA, s: '>'}
   - {t: /, h: '$$mdi:apple-keyboard-control$$', s: '?'}
   - $$mdi:apple-keyboard-shift$$
