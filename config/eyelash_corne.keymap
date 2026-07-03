@@ -28,30 +28,20 @@
 
 &soft_off { hold-time-ms = <2000>; };
 
+&mt: mod_tap {
+    flavor = "balanced";
+    tapping-term-ms = <180>;
+    quick-tap-ms = <120>;
+};
+
+&lt: layer_tap {
+    flavor = "balanced";
+    tapping-term-ms = <180>;
+    quick-tap-ms = <120>;
+};
+
 / {
     behaviors {
-        mt: mod_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <180>;
-            bindings = <&kp>, <&kp>;
-
-            display-name = "Mod-Tap";
-            quick-tap-ms = <120>;
-        };
-
-        lt: layer_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <180>;
-            bindings = <&mo>, <&kp>;
-
-            display-name = "Layer-Tap";
-            quick-tap-ms = <120>;
-        };
-
         rgb_encoder: rgb_encoder {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
