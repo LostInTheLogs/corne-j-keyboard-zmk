@@ -31,13 +31,13 @@
 &mt {
     flavor = "balanced";
     tapping-term-ms = <180>;
-    quick-tap-ms = <120>;
+    quick-tap-ms = <160>;
 };
 
 &lt {
     flavor = "balanced";
     tapping-term-ms = <180>;
-    quick-tap-ms = <120>;
+    quick-tap-ms = <160>;
 };
 
 / {
@@ -65,6 +65,7 @@
 
             display-name = "Mod-Tap";
             label = "H_MT";
+            quick-tap-ms = <160>;
         };
     };
 
