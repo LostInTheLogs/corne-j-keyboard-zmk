@@ -38,6 +38,7 @@
             bindings = <&kp>, <&kp>;
 
             display-name = "Mod-Tap";
+            quick-tap-ms = <120>;
         };
 
         lt: layer_tap {
@@ -48,6 +49,7 @@
             bindings = <&mo>, <&kp>;
 
             display-name = "Layer-Tap";
+            quick-tap-ms = <120>;
         };
 
         rgb_encoder: rgb_encoder {
