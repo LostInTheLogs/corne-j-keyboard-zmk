@@ -28,13 +28,13 @@
 
 &soft_off { hold-time-ms = <2000>; };
 
-&mt: mod_tap {
+&mt {
     flavor = "balanced";
     tapping-term-ms = <180>;
     quick-tap-ms = <120>;
 };
 
-&lt: layer_tap {
+&lt {
     flavor = "balanced";
     tapping-term-ms = <180>;
     quick-tap-ms = <120>;
