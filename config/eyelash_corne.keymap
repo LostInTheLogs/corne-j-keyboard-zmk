@@ -84,7 +84,7 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp ESCAPE  &kp Q        &mt RALT W   &kp E       &kp R      &kp T                              &kp UP                &kp Y         &kp U        &kp I           &mt RALT O     &kp P           &kp BACKSLASH
+&kp ESCAPE  &mt LALT Q   &mt RALT W   &kp E       &kp R      &kp T                              &kp UP                &kp Y         &kp U        &kp I           &mt RALT O     &mt LALT P      &kp BACKSLASH
 &kp TAB     &kp A        &kp S        &kp D       &kp F      &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &kp H         &kp J        &kp K           &kp L          &kp SEMI        &kp SQT
 &kp LSHIFT  &mt LCTRL Z  &mt LMETA X  &mt LALT C  &kp V      &kp B       &kp SPACE              &kp DOWN              &kp N         &kp M        &mt RALT COMMA  &mt RMETA DOT  &mt RCTRL FSLH  &kp RSHIFT
                                       &tog 3      &kp SPACE  &lt 4 BSPC                                               &lt 6 DELETE  &lt 5 ENTER  &mo 7
@@ -116,14 +116,13 @@
         };
 
         gaming {
-            bindings = <
-&trans  &kp T      &kp Q  &kp W   &kp E   &kp R                     &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LSHFT  &kp A  &kp S   &kp D   &kp F             &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LCTRL  &kp Z  &kp X   &kp C   &kp V   &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                          &tog 3  &trans  &trans                                    &trans  &trans  &trans
-            >;
-
             label = "GAMING";
+            bindings = <
+&trans  &kp Q   &kp W   &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                        &tog 3  &trans  &trans                                    &trans  &trans  &trans
+            >;
         };
 
         symbols {
