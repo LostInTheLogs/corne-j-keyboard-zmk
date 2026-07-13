@@ -35,7 +35,7 @@ layers:
   - {t: C, h: '$$mdi:apple-keyboard-option$$'}
   - V
   - B
-  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:arrow-down-bold$$
   - N
   - M
