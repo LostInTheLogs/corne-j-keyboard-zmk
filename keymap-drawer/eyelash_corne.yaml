@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
-  QWERTY:
+  .:
   - $$mdi:keyboard-esc$$
   - {t: Q, h: '$$mdi:apple-keyboard-option$$'}
   - {t: W, h: '$$mdi:apple-keyboard-option$$'}
