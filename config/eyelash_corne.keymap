@@ -67,6 +67,18 @@
             label = "H_MT";
             quick-tap-ms = <160>;
         };
+
+        tog_mo: tog_mo {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <180>;
+            bindings = <&tog>, <&mo>;
+
+            display-name = "Mod-Tap";
+            label = "toggle layer on top, momentary on hold";
+            quick-tap-ms = <160>;
+        };
     };
 
     combos {
@@ -84,10 +96,10 @@
         default_layer {
             display-name = ".";
             bindings = <
-&kp ESCAPE  &mt LALT Q   &mt RALT W   &kp E       &kp R      &kp T                          &kp K_CMENU             &kp Y         &kp U        &kp I           &mt RALT O     &mt LALT P      &kp BACKSLASH
-&kp TAB     &kp A        &kp S        &kp D       &kp F      &kp G                &kp LEFT  &kp ENTER    &kp RIGHT  &kp H         &kp J        &kp K           &kp L          &kp SEMI        &kp SQT
-&kp LSHIFT  &mt LCTRL Z  &mt LMETA X  &mt LALT C  &kp V      &kp B       &none              &kp DOWN                &kp N         &kp M        &mt RALT COMMA  &mt RMETA DOT  &mt RCTRL FSLH  &kp RSHIFT
-                                      &tog 3      &kp SPACE  &lt 4 BSPC                                             &lt 6 DELETE  &lt 5 ENTER  &mo 7
+&kp ESCAPE  &mt LALT Q   &mt RALT W   &kp E        &kp R      &kp T                          &kp K_CMENU             &kp Y         &kp U        &kp I           &mt RALT O     &mt LALT P      &kp BACKSLASH
+&kp TAB     &kp A        &kp S        &kp D        &kp F      &kp G                &kp LEFT  &kp ENTER    &kp RIGHT  &kp H         &kp J        &kp K           &kp L          &kp SEMI        &kp SQT
+&kp LSHIFT  &mt LCTRL Z  &mt LMETA X  &mt LALT C   &kp V      &kp B       &none              &kp DOWN                &kp N         &kp M        &mt RALT COMMA  &mt RMETA DOT  &mt RCTRL FSLH  &kp RSHIFT
+                                      &tog_mo 3 0  &kp SPACE  &lt 4 BSPC                                             &lt 6 DELETE  &lt 5 ENTER  &mo 7
             >;
         };
 
@@ -116,10 +128,10 @@
         gaming {
             label = "GAMING";
             bindings = <
-&trans  &kp Q   &kp W   &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp Z   &kp X   &kp C   &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                        &tog 3  &trans  &trans                                    &trans  &trans  &trans
+&trans  &kp Q   &kp W   &trans       &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans       &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp Z   &kp X   &kp C        &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                        &tog_mo 3 0  &trans  &trans                                    &trans  &trans  &trans
             >;
         };
 
