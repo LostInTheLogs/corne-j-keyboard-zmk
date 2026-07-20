@@ -73,7 +73,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <180>;
-            bindings = <&mo>, <&tog>;
+            bindings = <&mo_layer_toggle>, <&tog>;
 
             display-name = "Mod-Tap";
             label = "toggle layer on tap, momentary on hold";
@@ -90,6 +90,19 @@
         };
     };
 
+    macros {
+        mo_layer_toggle: mo_layer_toggle {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_param_1to1 &tog MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_param_1to1 &tog MACRO_PLACEHOLDER>;
+
+            label = "MO_LAYER_TOGGLE";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -99,7 +112,7 @@
 &kp ESCAPE  &mt LALT Q   &mt RALT W   &kp E        &kp R      &kp T                          &kp K_CMENU             &kp Y         &kp U        &kp I           &mt RALT O     &mt LALT P      &kp BACKSLASH
 &kp TAB     &kp A        &kp S        &kp D        &kp F      &kp G                &kp LEFT  &kp ENTER    &kp RIGHT  &kp H         &kp J        &kp K           &kp L          &kp SEMI        &kp SQT
 &kp LSHIFT  &mt LCTRL Z  &mt LMETA X  &mt LALT C   &kp V      &kp B       &none              &kp DOWN                &kp N         &kp M        &mt RALT COMMA  &mt RMETA DOT  &mt RCTRL FSLH  &kp RSHIFT
-                                      &mo_tog 0 3  &kp SPACE  &lt 4 BSPC                                             &lt 6 DELETE  &lt 5 ENTER  &mo 7
+                                      &mo_tog 3 3  &kp SPACE  &lt 4 BSPC                                             &lt 6 DELETE  &lt 5 ENTER  &mo 8
             >;
         };
 
@@ -119,7 +132,7 @@
 &trans  &trans  &trans  &trans  &trans      &trans                       &trans          &trans       &trans        &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans      &trans               &trans  &trans  &trans  &trans       &trans        &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans      &trans     &trans            &trans          &trans       &trans        &trans  &trans  &trans  &trans
-                        &tog 3  &lt 4 BSPC  &kp SPACE                                    &lt 5 ENTER  &lt 6 DELETE  &mo 7
+                        &tog 3  &lt 4 BSPC  &kp SPACE                                    &lt 5 ENTER  &lt 6 DELETE  &mo 8
             >;
 
             label = "sthumb";
@@ -131,7 +144,7 @@
 &trans  &kp Q   &kp W   &trans       &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans       &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp Z   &kp X   &kp C        &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                        &mo_tog 0 3  &trans  &trans                                    &trans  &trans  &trans
+                        &mo_tog 3 3  &trans  &trans                                    &trans  &trans  &trans
             >;
         };
 
@@ -168,6 +181,17 @@
             label = "SYSTEM";
         };
 
+        SYSNUM {
+            bindings = <
+&trans  &trans  &kp F7  &kp F8  &kp F9  &kp F10                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp F1  &kp F2  &kp F3  &kp F12  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                                     &trans  &trans  &trans
+            >;
+
+            label = "SYSNUM";
+        };
+
         keyboard {
             bindings = <
 &bt BT_CLR_ALL  &trans           &trans           &trans           &tog 1           &tog 2                             &trans                     &trans  &trans  &trans  &trans  &trans  &trans
@@ -179,17 +203,14 @@
             label = "KEYBOARD";
             sensor-bindings = <&rgb_encoder>;
         };
+    };
 
-        old1 {
-            display-name = "old1";
-            bindings = <
-&trans  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5                                         &mmv MOVE_UP                     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
-&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
-                                         &trans        &trans        &trans                                                                          &kp INS          &kp DEL          &trans
-            >;
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
 
-            sensor-bindings = <&scroll_encoder>;
+        sysnum {
+            if-layers = <5 6>;
+            then-layer = <7>;
         };
     };
 };
