@@ -43,7 +43,7 @@ layers:
   - {t: ., h: RMETA, s: '>'}
   - {t: /, h: '$$mdi:apple-keyboard-control$$', s: '?'}
   - $$mdi:apple-keyboard-shift$$
-  - {t: ., h: GAMING}
+  - {t: GAMING, h: .}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:backspace$$', h: SYMBOLS}
   - {t: '$$mdi:backspace-reverse-outline$$', h: SYSTEM}
@@ -190,7 +190,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: ., h: GAMING}
+  - {t: GAMING, h: ., type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
