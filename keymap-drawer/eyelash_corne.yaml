@@ -45,7 +45,7 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - {t: GAMING, h: mods}
   - $$mdi:keyboard-space$$
-  - {t: '$$mdi:backspace$$', h: NUMBERS}
+  - {t: '$$mdi:backspace$$', h: SYMBOLS}
   - {t: '$$mdi:backspace-reverse-outline$$', h: SYSTEM}
   - {t: '$$mdi:keyboard-return$$', h: NUMBERS}
   - KEYBOARD
@@ -142,7 +142,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:backspace$$', h: NUMBERS}
+  - {t: '$$mdi:backspace$$', h: SYMBOLS}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', h: NUMBERS}
   - {t: '$$mdi:backspace-reverse-outline$$', h: SYSTEM}
@@ -240,8 +240,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -289,10 +289,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
   - {type: held}
-  - {type: held alternate}
-  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   SYSTEM:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -387,8 +387,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
