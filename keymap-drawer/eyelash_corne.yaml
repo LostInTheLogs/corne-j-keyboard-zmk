@@ -43,7 +43,7 @@ layers:
   - {t: ., h: RMETA, s: '>'}
   - {t: /, h: '$$mdi:apple-keyboard-control$$', s: '?'}
   - $$mdi:apple-keyboard-shift$$
-  - {t: GAMING, h: mods}
+  - mods
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:backspace$$', h: SYMBOLS}
   - {t: '$$mdi:backspace-reverse-outline$$', h: SYSTEM}
@@ -442,7 +442,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   mods:
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: GAMING, h: toggle}
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:transfer$$', type: trans}
